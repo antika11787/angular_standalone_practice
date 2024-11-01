@@ -4,6 +4,7 @@ import { AboutComponent } from './common/about/about.component';
 import { ContactComponent } from './common/contact/contact.component';
 import { CustomerComponent } from './common/customer/customer.component';
 import { AddComponent } from './common/add/add.component';
+import { StatusComponent } from './common/status/status.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
         component: AddComponent,
       },
     ],
+  },
+  {
+    path: '**',
+    component: StatusComponent,
   },
 ];
