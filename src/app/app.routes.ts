@@ -27,7 +27,12 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    // lazy loading
+    // instead of "component: ContactComponent,"
+    loadComponent: () =>
+      import('./common/contact/contact.component').then(
+        (m) => m.ContactComponent
+      ),
     canActivate: [authGuard],
   },
   {
