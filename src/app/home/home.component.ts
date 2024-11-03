@@ -20,6 +20,19 @@ export class HomeComponent {
 
   isDisabled = false;
 
+  // _class = 'inactive';
+
+  _color = 'yellowgreen';
+  _fontSize = '12px';
+
+  isShow = true;
+
+  stackInfo = [
+    { id: 1, name: 'angular', color: 'goldenrod' },
+    { id: 2, name: 'react', color: 'mediumturquoise' },
+    { id: 3, name: 'vue', color: 'teal' },
+  ];
+
   changeTitle() {
     this.title = 'New Angular 18';
   }

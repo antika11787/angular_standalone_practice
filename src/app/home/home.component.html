@@ -16,13 +16,33 @@
     <!-- property binding -->
     <input type="checkbox" [checked]="isDisabled" />
     <input [value]="isDisabled" />
-
+    <br />
     <!-- event binding -->
     <button (click)="changeTitle()">Click</button>
     <!-- <input (keyup)="updateTitle($event)" /> -->
-
+    <br />
     <!-- two way binding(for forms and input control), both property and event binding -->
     <input [(ngModel)]="title" />
+    <br />
+
+    <!-- attribute directive -->
+    <p [ngClass]="{ active: isDisabled, inactive: !isDisabled }">
+      Example of attribute directives. (ngClass)
+    </p>
+
+    <p [ngStyle]="{ color: _color, fontSize: _fontSize }">
+      Example of attribute directives. (ngStyle)
+    </p>
+
+    <!-- structural directive -->
+    <p *ngIf="isShow">Example of structural directives. (*ngIf)</p>
+
+    <p>Example of structural directives. (*ngFor) -></p>
+    <div *ngFor="let stack of stackInfo">
+      <p [ngStyle]="{ color: stack.color }">
+        {{ stack.id }} - {{ stack.name | uppercase }} ({{ stack.color }})
+      </p>
+    </div>
   </mat-card-content>
 
   <mat-card-actions> </mat-card-actions>
