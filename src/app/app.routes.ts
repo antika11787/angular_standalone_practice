@@ -8,6 +8,7 @@ import { StatusComponent } from './common/status/status.component';
 import { authGuard } from './guard/auth.guard';
 import { childAuthGuard } from './guard/child-auth.guard';
 import { deacAuthGuard } from './guard/deac-auth.guard';
+import { LoginComponent } from './common/login/login.component';
 
 export const routes: Routes = [
   {
@@ -53,6 +54,10 @@ export const routes: Routes = [
         component: AddComponent,
       },
     ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '**',
